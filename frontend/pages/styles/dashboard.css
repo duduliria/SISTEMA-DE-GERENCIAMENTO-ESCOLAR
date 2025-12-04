@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f8fafc;
+}
+
+section {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  gap: 20px;
+  min-height: 100vh;
+  align-items: baseline;
+}
+
+/* aside */
+.menu-lateral {
+  padding: 24px;
+  background-color: #0f172b;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-lateral header {
+  padding: 6px;
+}
+
+.titulo-menu {
+  color: #fff;
+}
+
+.tipo-usuario {
+  color: #616a7b;
+}
+
+.linha {
+  height: 1px;
+  margin: 20px 0;
+  background-color: #616a7b;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.opcao {
+  color: #616a7b;
+  font-weight: bold;
+  padding: 12px;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  border-radius: 4px;
+}
+
+.dados-usuario {
+  background-color: #1d293d;
+}
+
+/* dashboard */
+.container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.header-dashboard {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 120px;
+}
+
+.card-header h3 {
+  color: #616a7b;
+  font-size: 13px;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card footer {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dados-usuario {
+  color: #616a7b;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.btn-sair {
+  display: inline-block;
+  color: #616a7b;
+  cursor: grab;
+  margin-top: 12px;
+}
+
+/* classes js */
+li.selecionado {
+  background-color: #155dfc;
+  color: #fff;
+}
+
+section.ativo {
+  display: block;
+}

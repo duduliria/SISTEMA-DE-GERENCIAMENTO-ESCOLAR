@@ -1,0 +1,168 @@
+.alunos form {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input-pesquisa {
+  border: 1px solid #999999;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 6px 12px;
+  min-width: 500px;
+  outline: none;
+}
+
+.btn-novo-aluno {
+  background-color: #3b82f6;
+  color: #fff;
+  border: 0;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s all ease-in-out;
+}
+
+.btn-novo-aluno:hover {
+  background-color: #1e6deb;
+}
+
+.modal-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.form-modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 495px;
+  border-radius: 10px;
+  padding: 28px 32px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.form-info h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.form-info p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+.form-grupo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+}
+
+.campos label {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.campos input {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.campos input::placeholder {
+  color: #9ca3af;
+}
+
+.campos input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.form-botoes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.btn-cancelar {
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-cadastrar {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-cadastrar:hover {
+  background: #1e4ed8;
+}
+
+.form-grupo:last-child {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.campos select {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+  background-color: #fff;
+  color: #111827;
+  cursor: pointer;
+}
+
+.campos select option:first-child {
+  color: #9ca3af;
+}
+
+.campos select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.campos {
+  position: relative;
+}
+
+/* classes js */
+.modal-container.ativo {
+  display: flex;
+}

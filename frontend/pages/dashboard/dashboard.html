@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/dashboard.css" />
+    <link rel="stylesheet" href="../styles/aluno.css" />
+    <link rel="stylesheet" href="../styles/turma.css" />
+    <title>Dashbaord</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <aside class="menu-lateral">
+        <div>
+          <header>
+            <h4 class="titulo-menu">Gestao escolar</h4>
+            <small class="tipo-usuario">Administrador</small>
+          </header>
+          <div class="linha"></div>
+
+          <nav>
+            <ul class="opcoes">
+              <li class="opcao">Dashbaord</li>
+              <li class="opcao">Alunos</li>
+              <li class="opcao">Turmas</li>
+              <li class="opcao">Matrículas</li>
+              <li class="opcao">Notas e histórico</li>
+              <li class="opcao">Antendimento</li>
+            </ul>
+          </nav>
+        </div>
+
+        <footer class="rodape">
+          <div class="dados-usuario">
+            <h4>Administrador</h4>
+            <small>admin@escola.com</small>
+          </div>
+          <a class="btn-sair" href="../../../index.html">Sair</a>
+        </footer>
+      </aside>
+
+      <main class="container">
+        <section class="dashboard">
+          <header class="header-dashboard">
+            <h1>Dashboard</h1>
+            <p>Visão geral do sistema de gestão escolar</p>
+          </header>
+
+          <div class="cards">
+            <div class="card">
+              <div class="card-header">
+                <h3>Alunos Ativos</h3>
+              </div>
+
+              <footer>
+                <h1>0</h1>
+                <p><span>0</span> alunos cadastrados</p>
+              </footer>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3>Alunos Ativos</h3>
+              </div>
+              <footer>
+                <h1>0</h1>
+                <p><span>0</span> alunos cadastrados</p>
+              </footer>
+            </div>
+          </div>
+        </section>
+
+        <section class="alunos">
+          <header class="header-alunos">
+            <h1>Gestão de Alunos</h1>
+            <p>Cadastre e gerencie os alunos da instituição</p>
+          </header>
+
+          <form>
+            <input
+              class="input-pesquisa"
+              type="text"
+              placeholder="Buscar por nome, CPF ou email"
+            />
+            <button id="btn-novo-aluno" class="btn-novo-aluno">
+              + Novo Aluno
+            </button>
+          </form>
+
+          <!-- modal form -->
+          <div class="modal-container">
+            <form class="form-modal">
+              <div class="form-info">
+                <h2>Novo Aluno</h2>
+                <p>Preencha os dados para cadastrar um novo aluno</p>
+              </div>
+
+              <!-- LINHA 1 -->
+              <div class="form-grupo">
+                <div class="campos">
+                  <label for="nome">Nome Completo *</label>
+                  <input type="text" id="nome" placeholder="João Silva" />
+                </div>
+
+                <div class="campos">
+                  <label for="cpf">CPF *</label>
+                  <input type="text" id="cpf" placeholder="000.000.000-00" />
+                </div>
+              </div>
+
+              <!-- LINHA 2 -->
+              <div class="form-grupo">
+                <div class="campos">
+                  <label for="nascimento">Data de Nascimento *</label>
+                  <input type="date" id="nascimento" />
+                </div>
+
+                <div class="campos">
+                  <label for="telefone">Telefone *</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+              </div>
+
+              <!-- LINHA 3 -->
+              <div class="form-grupo">
+                <div class="campos">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" placeholder="joao@email.com" />
+                </div>
+
+                <div class="campos">
+                  <label for="situacao">Situação *</label>
+                  <select id="situacao">
+                    <option value="ativo">Ativo</option>
+                    <option value="inativo">Inativo</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- LINHA 4 - ENDEREÇO 100% -->
+              <div class="form-grupo">
+                <div class="campos">
+                  <label for="endereco">Endereço Completo *</label>
+                  <input
+                    type="text"
+                    id="endereco"
+                    placeholder="Rua, número, bairro, cidade - UF"
+                  />
+                </div>
+              </div>
+
+              <!-- BOTÕES -->
+              <div class="form-botoes">
+                <button type="button" id="btn-cancelar" class="btn-cancelar">
+                  Cancelar
+                </button>
+                <button type="submit" class="btn-cadastrar">Cadastrar</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="turmas">
+          <header class="header-turmas">
+            <h1>Gestão de Turmas</h1>
+            <p>Cadastre e gerencie turmas e cursos</p>
+          </header>
+
+          <form>
+            <input
+              class="input-pesquisa"
+              type="text"
+              placeholder="Buscar por nome da turma ou curso"
+            />
+            <button id="btn-nova-turma" class="btn-nova-turma">
+              + Nova Turma
+            </button>
+          </form>
+
+          <!-- modal form -->
+          <div class="modal-container">
+            <form class="form-modal">
+              <div class="form-info">
+                <h2>Nova Turma</h2>
+                <p>Preencha os dados para cadastrar um novo aluno</p>
+              </div>
+
+              <!-- LINHA 1 -->
+              <div class="form-grupo">
+                <div class="campos">
+                  <label for="nome">Nome Completo *</label>
+                  <input type="text" id="nome" placeholder="João Silva" />
+                </div>
+
+                <div class="campos">
+                  <label for="cpf">CPF *</label>
+                  <input type="text" id="cpf" placeholder="000.000.000-00" />
+                </div>
+              </div>
+
+              <!-- LINHA 2 -->
+              <div class="form-grupo">
+                <div class="campos">
+                  <label for="nascimento">Data de Nascimento *</label>
+                  <input type="date" id="nascimento" />
+                </div>
+
+                <div class="campos">
+                  <label for="telefone">Telefone *</label>
+                  <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+              </div>
+
+              <!-- LINHA 3 -->
+              <div class="form-grupo">
+                <div class="campos">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" placeholder="joao@email.com" />
+                </div>
+
+                <div class="campos">
+                  <label for="situacao">Situação *</label>
+                  <select id="situacao">
+                    <option value="ativo">Ativo</option>
+                    <option value="inativo">Inativo</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- LINHA 4 - ENDEREÇO 100% -->
+              <div class="form-grupo">
+                <div class="campos">
+                  <label for="endereco">Endereço Completo *</label>
+                  <input
+                    type="text"
+                    id="endereco"
+                    placeholder="Rua, número, bairro, cidade - UF"
+                  />
+                </div>
+              </div>
+
+              <!-- BOTÕES -->
+              <div class="form-botoes">
+                <button type="button" id="btn-cancelar" class="btn-cancelar">
+                  Cancelar
+                </button>
+                <button type="submit" class="btn-cadastrar">Cadastrar</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section class="alunos">
+          <header class="header-alunos">
+            <h1>Matrículas</h1>
+          </header>
+        </section>
+
+        <section class="alunos">
+          <header class="header-alunos">
+            <h1>Notas/histórico</h1>
+          </header>
+        </section>
+
+        <section class="alunos">
+          <header class="header-alunos">
+            <h1>Atendimento</h1>
+          </header>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../scripts/script.js"></script>
+  </body>
+</html>
